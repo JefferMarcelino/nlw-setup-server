@@ -8,7 +8,8 @@ app.register(cors);
 app.register(appRoutes);
 
 app.listen({
-    port: 3333
-}).then(() => {
-    console.log("HTTP Server running");
+    port: 3333,
+    host: "0.0.0.0"
+}).then((url) => {
+    console.log("HTTP Server running at ", url);
 });
